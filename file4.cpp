@@ -7,7 +7,7 @@ int itc_second_max_num(long long number) {
 	if (number < 0) number = -number;
 	while (number > 0) {
 		raz = number % 10;
-		if (raz > max1) {
+		if (raz >= max1) {
 			max2 = max1;
 			max1 = raz;
 		}
@@ -20,14 +20,20 @@ int itc_second_max_num(long long number) {
 } 
 
 int itc_second_simple_max_num(long long number) {
-	int max = 0;
-	int max2 = itc_second_max_num(number);
+	int raz = 0;
+	int max1 = -1, max2 = -1;
+	if (number < 10 && number > -10) return -1;
+	if (number < 0) number = -number;
 	while (number > 0) {
-		int raz = number % 10;
-		if (raz > max) max = raz;
+		raz = number % 10;
+		if (raz > max1) {
+			max2 = max1;
+			max1 = raz;
+		}
+		else if (raz < max1 && raz > max2) max2 = raz;
 		number /= 10;
 	}
-	if (max == max2) return -1;
+	if (max1 == max2) return -1;
 	return max2;
 } 
 
