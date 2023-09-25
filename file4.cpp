@@ -45,22 +45,6 @@ int itc_second_simple_max_num(long long number) {
 } 
 
 long long itc_oct_num(long long number) {
-	/*int z = 0;
-	int oct = 0;
-	int ost = 0;
-	int ost2 = 0;
-	while (number > 0) {
-		z = number % 8;
-		oct = oct * 10 + z;
-		number /= 8;
-	}
-	for (int i = 1; oct > 0; i * 10) {
-		ost = oct % 10;
-		ost2 = ost2 * i + ost;
-		oct /= 10;
-	} 
-	return oct; */
-	
 	int ost = 0;
 	long long z = 0;
 	long long oct = 0;
