@@ -15,6 +15,8 @@ int itc_second_max_num(long long number);
 int itc_second_simple_max_num(long long number);
 long long itc_bin_num(long long number);
 long long itc_oct_num(long long number);
+int itc_rev_bin_num(long long number);
+int itc_rev_oct_num(long long number);
 double itc_pow(int num, int step);
 
 #endif
